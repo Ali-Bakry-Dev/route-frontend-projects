@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 shadow-sm">
+      <div class="container-fluid px-5 d-flex justify-content-between">
+        <div class="header-brand d-flex align-items-center gap-2">
+          <div
+            class="brand-logo d-flex justify-content-center align-items-center rounded-circle"
+          >
+            <i class="fa-solid fa-utensils text-white fs-5"></i>
+          </div>
+          <div class="">
+            <h1 class="mb-0 fw-bolder">What's For Dinner</h1>
+            <span class="fs-7 text-muted-subtle mt-0">Your daily meal inspiration</span>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end align-items-center"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav align-items-lg-center">
+            <a href="#" class="nav-link mb-3 mb-lg-2">
+              <i class="fa-solid fa-bookmark fs-5 me-2 me-lg-3"></i>
+              <span class="d-lg-none">Saved Recipes</span>
+            </a>
+            <a href="#" class="nav-link mb-3 mb-lg-2">
+              <i class="fa-solid fa-clock-rotate-left fs-5 me-2 me-lg-3"></i>
+              <span class="d-lg-none">Recent</span>
+              
+            </a>
+            <a href="#" class="nav-link mb-3 mb-lg-2">
+               <i class="fa-solid fa-gear fs-5 me-2 me-lg-3"></i>
+               <span  class="d-lg-none">Settings</span>
+              
+              </a>
+              <a class="image" class="nav-link mb-3 mb-lg-2">
+                <img
+                  src="images/avatar-2.jpg"
+                  alt="user photo"
+                  class="rounded-circle me-2 "
+                />
+                <span  class="d-lg-none">Profile</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main-content m-auto">
+      <section class="recipe-section">
+        <div class="container rounded-5 overflow-hidden bg-white" id="recipe-container">
+          <div class="row h-100">
+            <div class="recipe-image-col col-lg-5 p-0">
+              <div class="image-wrapper position-relative">
+                <img
+                  src="images/photo-1509722747041-616f39b57569.jpg"
+                  alt=""
+                  class="w-100 h-100 object-fit-cover"
+                />
+                <div class="rating-badge position-absolute rounded-pill">
+                  <div class="d-flex align-items-center">
+                    <i class="star-icon fa-solid fa-star me-2"></i>
+                    <span class="me-2 fw-bolder">4.7</span>
+                    <span class="text-muted-subtle">(312 reviews)</span>
+                  </div>
+                </div>
+                <div class="recipe-info position-absolute">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-center px-4">
+                      <i class="fa-solid fa-clock fs-3"></i>
+                      <p class="text-muted-subtle m-0">Prep Time</p>
+                      <p class="fw-bolder m-0">15 min</p>
+                    </div>
+                    <div class="text-center px-4">
+                      <i class="fa-solid fa-fire-burner fs-3"></i>
+                      <p class="text-muted-subtle m-0">Cook Time</p>
+                      <p class="fw-bolder m-0">60 min</p>
+                    </div>
+                    <div class="text-center px-4">
+                      <i class="fa-solid fa-users fs-3"></i>
+                      <p class="text-muted-subtle m-0">Servings</p>
+                      <p class="fw-bolder m-0">4 people</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="recipe-details-col col-lg-7 p-5 overflow-auto h-100">
+              <div
+                class="recipe-header d-flex flex-column-reverse flex-md-row align-items-end align-items-md-center justify-content-between mb-3"
+              >
+                <div>
+                  <div class="mb-3">
+                    <span class="badge-difficulty rounded-pill me-2">easy</span>
+                    <span class="badge-cuisine rounded-pill">Italian</span>
+                  </div>
+                  <h2 class="fw-bolder fs-2">Caprese Sandwich</h2>
+                  <p class="text-muted-subtle fs-5">
+                    Fresh Italian sandwich with mozzarella, tomato, and basil
+                  </p>
+                </div>
+                <div>
+                  <div class="d-flex ">
+                    <div
+                      class="action-icon me-4 d-flex align-items-center justify-content-center rounded-3"
+                    >
+                      <i class="fa-solid fa-bookmark fs-5"></i>
+                    </div>
+                    <div
+                      class="action-icon d-flex align-items-center justify-content-center rounded-3"
+                    >
+                      <i class="fa-solid fa-share-nodes fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div>
+                <ul
+                  class="nav nav-pills recipe-tabs mb-3 d-flex justify-content-between p-2 row"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item col-3" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="pills-Ingredients-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-Ingredients"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-Ingredients"
+                      aria-selected="true"
+                    >
+                      <i class="fa-solid fa-list-check me-1"></i>
+                      Ingredients
+                    </button>
+                  </li>
+                  <li class="nav-item col-3" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-Instructions-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-Instructions"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-Instructions"
+                      aria-selected="false"
+                    >
+                      <i class="fa-etch fa-solid fa-book-open me-1"></i>
+                      Instructions
+                    </button>
+                  </li>
+                  <li class="nav-item col-3" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-Nutrition-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-Nutrition"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-Nutrition"
+                      aria-selected="false"
+                    >
+                      <i class="fa-solid fa-chart-pie me-1"></i>
+                      Nutrition
+                    </button>
+                  </li>
+                  <li class="nav-item col-3" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-Tips-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-Tips"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-Tips"
+                      aria-selected="false"
+                    >
+                      <i class="fa-solid fa-lightbulb me-1"></i>
+                      Chef's Tips
+                    </button>
+                  </li>
+                </ul>
+                <hr />
+                <div class="tab-content mt-4" id="pills-tabContent">
+                  <div
+                    class="Ingredients tab-pane fade show active overflow-auto"
+                    id="pills-Ingredients"
+                    role="tabpanel"
+                    aria-labelledby="pills-Ingredients-tab"
+                    tabindex="0"
+                  >
+                    <div class="container p-3 overflow-auto">
+                      <ul>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            1
+                          </div>
+                          <span>3 large eggplants, sliced</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            2
+                          </div>
+                          <span> 500g ground lamb</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            3
+                          </div>
+                          <span> 400g canned tomatoes</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            4
+                          </div>
+                          <span> 1 onion, diced</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            5
+                          </div>
+                          <span>3 cloves garlic, minced</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            6
+                          </div>
+                          <span>500ml béchamel sauce</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            7
+                          </div>
+                          <span>100g parmesan cheese</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            8
+                          </div>
+                          <span> Cinnamon and oregano</span>
+                        </li>
+                        <li class="d-flex mb-3">
+                          <div
+                            class="step-counter rounded-circle d-flex justify-content-center align-items-center p-0 me-2"
+                          >
+                            9
+                          </div>
+                          <span> Olive oil</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="Instructions tab-pane fade overflow-auto"
+                    id="pills-Instructions"
+                    role="tabpanel"
+                    aria-labelledby="pills-Instructions-tab"
+                    tabindex="0"
+                  >
+                    <div class="w-100">
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="instruction-step d-flex align-items-center justify-content-center me-3"
+                        >
+                          1
+                        </div>
+                        <p>
+                          Slice eggplants, salt them, and let sit for 30
+                          minutes. Rinse and pat dry.
+                        </p>
+                      </div>
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="instruction-step d-flex align-items-center justify-content-center me-3"
+                        >
+                          2
+                        </div>
+                        <p>
+                          Brush eggplant slices with olive oil, grill or bake
+                          until softened.
+                        </p>
+                      </div>
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="instruction-step d-flex align-items-center justify-content-center me-3"
+                        >
+                          3
+                        </div>
+                        <p>
+                          Cook ground lamb with onion and garlic. Add tomatoes,
+                          cinnamon, oregano. Simmer 20 minutes.
+                        </p>
+                      </div>
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="instruction-step d-flex align-items-center justify-content-center me-3"
+                        >
+                          4
+                        </div>
+                        <p>Preheat oven to 180°C (350°F).</p>
+                      </div>
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="instruction-step d-flex align-items-center justify-content-center me-3"
+                        >
+                          5
+                        </div>
+                        <p>
+                          Layer in baking dish : eggplant, meat sauce, eggplant,
+                          meat sauce. Top with béchamel and parmesan.
+                        </p>
+                      </div>
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="instruction-step d-flex align-items-center justify-content-center me-3"
+                        >
+                          6
+                        </div>
+                        <p>
+                          Bake for 45 minutes until golden. Let rest 15 minutes
+                          before serving.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="Nutrition tab-pane fade overflow-auto"
+                    id="pills-Nutrition"
+                    role="tabpanel"
+                    aria-labelledby="pills-Nutrition-tab"
+                    tabindex="0"
+                  >
+                    <div class="container w-100 h-100">
+                      <div class="row row-gap-3">
+                        <div class="col-md-6">
+                          <div
+                            class="d-flex align-items-center justify-content-between nutrition-card"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="nutrition-icon d-flex justify-content-center align-items-center flex-shrink-0 me-3"
+                              >
+                                <i class="fa-solid fa-fire fs-5"></i>
+                              </div>
+                              <span>Calories</span>
+                            </div>
+                            <span class="fw-bolder fs-5">580 kcal</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="d-flex align-items-center justify-content-between nutrition-card"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="nutrition-icon d-flex justify-content-center align-items-center flex-shrink-0 me-3"
+                              >
+                                <i class="fa-solid fa-dumbbell fs-5"></i>
+                              </div>
+                              <span>Protein</span>
+                            </div>
+                            <span class="fw-bolder fs-5">36g</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="d-flex align-items-center justify-content-between nutrition-card"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="nutrition-icon d-flex justify-content-center align-items-center flex-shrink-0 me-3"
+                              >
+                                <i class="fa-solid fa-wheat-awn fs-5"></i>
+                              </div>
+                              <span>Carbohydrates</span>
+                            </div>
+                            <span class="fw-bolder fs-5">32g</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="d-flex align-items-center justify-content-between nutrition-card"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="nutrition-icon d-flex justify-content-center align-items-center flex-shrink-0 me-3"
+                              >
+                                <i class="fa-solid fa-droplet fs-5"></i>
+                              </div>
+                              <span>Fat</span>
+                            </div>
+                            <span class="fw-bolder fs-5">32g</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="d-flex align-items-center justify-content-between nutrition-card"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="nutrition-icon d-flex justify-content-center align-items-center flex-shrink-0 me-3"
+                              >
+                                <i class="fa-solid fa-seedling fs-5"></i>
+                              </div>
+                              <span>Fiber</span>
+                            </div>
+                            <span class="fw-bolder fs-5">8g</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="d-flex align-items-center justify-content-between nutrition-card"
+                          >
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="nutrition-icon d-flex justify-content-center align-items-center flex-shrink-0 me-3"
+                              >
+                                <i class="fa-solid fa-cube fs-5"></i>
+                              </div>
+                              <span>Sodium</span>
+                            </div>
+                            <span class="fw-bolder fs-5">820mg</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade overflow-auto"
+                    id="pills-Tips"
+                    role="tabpanel"
+                    aria-labelledby="pills-Tips-tab"
+                    tabindex="0"
+                  >
+                    <div>
+                      <div class="tips-card d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check me-2 fs-5"></i>
+                        <p class="mb-0 text-muted-subtle">
+                          Salt eggplant to remove bitterness
+                        </p>
+                      </div>
+                      <div class="tips-card d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check me-2 fs-5"></i>
+                        <p class="mb-0 text-muted-subtle">
+                          Don't skip the resting time - it helps set the layers
+                        </p>
+                      </div>
+                      <div class="tips-card d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check me-2 fs-5"></i>
+                        <p class="mb-0 text-muted-subtle">
+                          Use ground beef if lamb is unavailable
+                        </p>
+                      </div>
+                      <div class="tips-card d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check me-2 fs-5"></i>
+                        <p class="mb-0 text-muted-subtle">
+                          Make ahead and reheat for easier serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="mt-4" />
+                <div>
+                  <button
+                    class="btn randomize-btn rounded-3 shadow text-white"
+                    onclick="randomRecipes()"
+                  >
+                    <i class="fa-solid fa-rotate me-1"></i>
+                    Try Another Recipe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

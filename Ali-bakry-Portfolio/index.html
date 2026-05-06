@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Ali Bakry Portfolio </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: cadetblue;">
+<div class="sections">
+<div class="sections">
+    <h1 style="text-align: center;">
+        Ali Bakry Portfolio
+    </h1>
+    <h2 style="text-align: center;">
+        Professional Web Developer
+    </h2>
+</div>
+<section id="about ">
+    <h2 style="color: darkblue;">
+        About Me
+    </h2>
+    <img src="image.jpeg" alt="Profile photo of John Doe" width="150">
+    <div class="skills">
+
+        <p style="text-align: left;">Hello! I'm Ali Bakry, a passionate web developer with over 5 years of
+            experience in creating innovative digital solutions.
+            <br><br>
+            I specialize in full-stack development and have a keen interest in modern web technologies.
+        </p>
+        <h2 style="background-color: rgba(5, 238, 238, 0.789);">Social links</h2>
+        <ul>
+            <li><a href="https://facebook.com" target="_blank">
+<img src="facebook.png" alt="facebook link" width="30px">
+            </a></li>
+            <li><a href="https://linkedin.com" target="_blank">
+                <img src="LinkedIn.webp" alt="linkedin link" width="30px">
+
+            </a></li>
+            <li><a href="https://instagram.com" target="_blank">
+                <img src="insta.jpg" alt="instagram link" width="30px">
+            </a></li>
+            <li><a href="https://github.com" target="_blank">
+                <img src="git.svg" alt="github link" width="30px">
+            </a></li>
+        </ul>
+
+</section>
+<!--skills -->
+
+<h2 style="text-align: center; background-color:rgba(5, 238, 238, 0.789);"" >Skills</h2>
+<ul style=" text-align: center;">
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML5</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+    <li><a href="https://react.dev/" target="_blank">ReactJS</a></li>
+    <li><a href="https://angular.io/" target="_blank">Angular</a></li>
+    </ul>
+    </section>
+</div>
+<!--expirince-->
+
+<h2>Experience Timeline</h2>
+<div class="table">
+<table border="1" width="100%" cellspacing="0" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Logo</th>
+            <th>Role</th>
+            <th>Key Achievements</th>
+            <th>Dates</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TechCorp Solutions</td>
+            <td><img src="logo1.jpg" alt="TechCorp Logo" width="50"></td>
+            <td>Senior Full Stack Developer</td>
+            <td>
+                <ul>
+                    <li>Led development of web applications</li>
+                    <li>Mentored junior developers</li>
+                    <li>Architect scalable solutions</li>
+                </ul>
+            </td>
+            <td>Jan 2023_ Present</td>
+        </tr>
+        <tr>
+            <td>Digital Agency Pro</td>
+            <td><img src="logo2.webp" alt="Digital Agency Logo" width="70"></td>
+            <td>Frontend Developer</td>
+            <td>
+                <ul>
+                    <li>Built user interfaces from mockups</li>
+                    <li>Implemented responsive designs</li>
+                    <li>Conducted code reviews</li>
+                </ul>
+            </td>
+            <td>2020 _ 2021</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Web Design Studio</td>
+            <td rowspan="2"><img src="logo3.jpg" alt="Web Design Studio Logo" width="60"></td>
+            <td>Junior Web Developer</td>
+            <td>
+                <ul>
+                    <li>Maintained existing websites</li>
+                    <li>Fixed bugs and implemented features</li>
+                </ul>
+            </td>
+            <td>2019_2020</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align:center;">Total Experience: 5+ years</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+</div>
+<!--contact me -->
+
+<h2>Contact Me</h2>
+<div class="form">
+<form action="submit.php" method="post">
+
+
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+    <br><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" placeholder="0123456789">
+    <br><br>
+
+    <label for="meetingDate">Meeting Date:</label>
+    <input type="date" id="meetingDate" name="meetingDate">
+    <br><br>
+
+    <label for="time">Preferred Time:</label>
+    <input type="time" id="time" name="time">
+    <br><br>
+
+
+    <label for="projectType">Project Type:</label>
+    <input list="projectOptions" id="projectType" name="projectType" placeholder="Choose project type">
+    <datalist id="projectOptions">
+        <option value="Web Development">
+        <option value="Mobile App Development">
+        <option value="UI/UX Design">
+    </datalist>
+    <br><br>
+
+    <label for="description">Project Description:</label><br>
+    <textarea id="description" name="description" rows="5" cols="40"
+        placeholder="Describe your project..."></textarea>
+    <br><br>
+
+    <p>Budget:</p>
+    <input type="radio" id="budget1" name="budget" value="Under $1000">
+    <label for="budget1">Under $1000</label><br>
+
+    <input type="radio" id="budget2" name="budget" value="$1000 - $5000">
+    <label for="budget2">$1000 - $5000</label><br>
+
+    <input type="radio" id="budget3" name="budget" value="Above $5000">
+    <label for="budget3">Above $5000</label>
+    <br><br>
+
+    <p>Services Required:</p>
+    <input type="checkbox" id="ux" name="services" value="UI/UX Design">
+    <label for="ux">UI/UX Design</label><br>
+
+    <input type="checkbox" id="frontend" name="services" value="Frontend Development">
+    <label for="frontend">Frontend Development</label><br>
+
+    <input type="checkbox" id="backend" name="services" value="Backend Development">
+    <label for="backend">Backend Development</label><br>
+
+    <input type="checkbox" id="support" name="services" value="Support">
+    <label for="support">Support & Maintenance</label>
+    <br><br>
+
+    <label for="hear">How did you hear about me?</label>
+    <select id="hear" name="hear">
+        <option value="friend">Friend</option>
+        <option value="social">Social Media</option>
+        <option value="ads">Advertisement</option>
+        
+    </select>
+    <br><br>
+
+
+    <input type="submit" value="Send Message">
+    <input type="reset" value="Clear Form">
+
+</form>
+</div>
+
+
+
+
+
+
+</div>
+</body>
+
+</html>
