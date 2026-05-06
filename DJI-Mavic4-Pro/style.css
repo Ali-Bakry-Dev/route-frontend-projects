@@ -605,3 +605,367 @@ img {
 /* DJI Icon in About */
 .footer-column.about h3 i { margin-right:8px; color:#fff;
 background:\; } 
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+/* Tablet Landscape */
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    width: 90%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .product-card {
+    width: 31%;
+    margin: 1%;
+  }
+  
+  .footer-column {
+    width: 48%;
+    margin: 1%;
+  }
+  
+  .reviews-grid {
+    grid-template-columns: 35% 1fr;
+    gap: 15px;
+  }
+  
+  .review-header {
+    grid-template-columns: 60px 1fr auto;
+    gap: 10px;
+  }
+}
+
+/* Tablet Portrait */
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+  
+  .navbar {
+    padding: 12px 0;
+  }
+  
+  .nav-left, .nav-right {
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .nav-right a {
+    margin: 0 12px;
+    display: inline-block;
+  }
+  
+  .hero-image, .hero-text {
+    float: none;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .hero-image {
+    margin-bottom: 30px;
+  }
+  
+  .hero-image img {
+    margin: 0 auto;
+  }
+  
+  .discount-badge {
+    left: 20px;
+    top: 10px;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .badges {
+    text-align: center;
+  }
+  
+  .product-actions {
+    text-align: center;
+  }
+  
+  .btn {
+    max-width: 300px;
+    margin: 10px auto;
+  }
+  
+  .comparison-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .review-summary-box {
+    position: relative;
+    top: 0;
+  }
+  
+  .review-header {
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+      "avatar info"
+      "verified verified";
+    gap: 8px;
+  }
+  
+  .review-header img {
+    grid-area: avatar;
+  }
+  
+  .reviewer-info {
+    grid-area: info;
+  }
+  
+  .verified {
+    grid-area: verified;
+    justify-self: start;
+  }
+  
+  .product-card {
+    width: 48%;
+    margin: 1%;
+  }
+  
+  .footer-column {
+    width: 100%;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  
+  .footer-bottom .copyright, .footer-bottom .payments {
+    float: none;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom .payments img {
+    margin: 0 8px;
+  }
+  
+  .winner-container {
+    width: 90%;
+    max-width: 90%;
+  }
+  
+  .winner-text h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 14px;
+    padding-top: 140px;
+  }
+  
+  .nav-left .logo-text {
+    font-size: 1rem;
+  }
+  
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  
+  .nav-right a {
+    margin: 0 8px;
+    font-size: 0.85rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .current-price {
+    font-size: 1.6rem;
+  }
+  
+  .old-price, .save-price {
+    font-size: 0.8rem;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 12px 0;
+    font-size: 0.9rem;
+    max-width: 250px;
+  }
+  
+  .comparison-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .comparison-header p {
+    font-size: 0.9rem;
+  }
+  
+  .comparison-table th, .comparison-table td {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+  
+  .comparison-table .subtext {
+    font-size: 0.65rem;
+  }
+  
+  .icon {
+    font-size: 0.9rem;
+    margin-right: 4px;
+  }
+  
+  .winner-text h3 {
+    font-size: 1rem;
+  }
+  
+  .winner-text p {
+    font-size: 0.8rem;
+  }
+  
+  .reviews-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .reviews-header p {
+    font-size: 0.9rem;
+  }
+  
+  .average-rating .rating-number {
+    font-size: 2.5rem;
+  }
+  
+  .average-rating .stars i {
+    font-size: 1rem;
+  }
+  
+  .rating-breakdown .rating-row {
+    font-size: 0.8rem;
+  }
+  
+  .review-card {
+    padding: 15px;
+  }
+  
+  .reviewer-info .name {
+    font-size: 0.9rem;
+  }
+  
+  .reviewer-info .job {
+    font-size: 0.7rem;
+  }
+  
+  .verified {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+  
+  .review-text {
+    font-size: 0.85rem;
+  }
+  
+  .load-more-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .related-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .related-header p {
+    font-size: 0.9rem;
+  }
+  
+  .product-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .product-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .product-card p {
+    font-size: 0.8rem;
+  }
+  
+  .product-card .price {
+    font-size: 1rem;
+  }
+  
+  .add-cart-btn, .view-all-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-column h3, .footer-column h4 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-column p, .footer-column ul li {
+    font-size: 0.8rem;
+  }
+  
+  .social-links a {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .footer-bottom .copyright, .footer-bottom .payments span {
+    font-size: 0.7rem;
+  }
+  
+  .footer-bottom .payments img {
+    height: 20px;
+    margin: 0 5px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+  .nav-right a {
+    margin: 0 5px;
+    font-size: 0.7rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+  
+  .current-price {
+    font-size: 1.3rem;
+  }
+  
+  .btn {
+    max-width: 200px;
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+}

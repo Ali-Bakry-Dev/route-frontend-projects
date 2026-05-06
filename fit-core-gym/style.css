@@ -374,3 +374,273 @@ img {
 .testimonial-card:hover h3 {
   color: #2196f3;
 }
+
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+/* Tablet Landscape */
+@media screen and (max-width: 1024px) {
+  .hero .container {
+    width: 90%;
+  }
+  
+  .why .container {
+    width: 90%;
+  }
+  
+  .why .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .feature {
+    float: none;
+    width: calc(50% - 25px);
+    margin-right: 0;
+  }
+  
+  .feature:last-child {
+    margin-right: auto;
+  }
+  
+  .testimonials .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .testimonial-card {
+    float: none;
+    width: calc(50% - 25px);
+    margin: 0;
+    height: auto;
+    min-height: 380px;
+  }
+  
+  .more .container {
+    width: 80%;
+  }
+}
+
+/* Tablet Portrait & Small Screens */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .hero-text {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-image {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .buttons a {
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  .feature {
+    width: 100%;
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .more .container {
+    width: 90%;
+  }
+  
+  .more-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .more img {
+    width: 100%;
+  }
+  
+  .more-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .stat-box {
+    flex: none;
+    width: 100%;
+  }
+  
+  .stat-box h3 {
+    font-size: 40px;
+  }
+  
+  .join-form {
+    padding: 25px 15px;
+  }
+  
+  .form-group {
+    float: none;
+    width: 98%;
+    margin: 10px 1%;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  
+  .footer-section {
+    flex: auto;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  
+  .buttons a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .why-header h2 {
+    font-size: 24px;
+  }
+  
+  .why-header p {
+    font-size: 0.9rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+  }
+  
+  .feature p {
+    font-size: 0.85rem;
+  }
+  
+  .more-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .more-text h3 {
+    font-size: 1.2rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section-desc {
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+  
+  .testimonial-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .testimonial-card span {
+    font-size: 0.8rem;
+  }
+  
+  .testimonial-card p {
+    font-size: 0.85rem;
+  }
+  
+  .stat-box h3 {
+    font-size: 32px;
+  }
+  
+  .join-container h2 {
+    font-size: 1.6rem;
+  }
+  
+  .join-container p {
+    font-size: 0.9rem;
+  }
+  
+  .join-form label {
+    font-size: 0.85rem;
+  }
+  
+  .join-form input,
+  .join-form select,
+  .join-form textarea {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+  
+  .join-form button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 0.8rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Large Desktop Enhancements */
+@media screen and (min-width: 1400px) {
+  .hero .container,
+  .why .container,
+  .testimonials .container,
+  .stats-container,
+  .join-container,
+  .footer-container {
+    max-width: 1300px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.4rem;
+  }
+}
