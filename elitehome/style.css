@@ -213,12 +213,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* الصف الأول: 3 أعمدة تصبح تحت بعض */
+ 
   .form-row-top {
     grid-template-columns: 1fr;
   }
 
-  /* الصف الثاني: 4 أعمدة تصبح 2×2 */
   .form-row-bottom {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;

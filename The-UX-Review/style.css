@@ -9,10 +9,10 @@ body {
   color: #000;
   background-color: #FFEB6E;
   overflow-x: hidden;
-  font-size: 18px; /* صغرنا شويه */
+  font-size: 18px;
 }
 
-/* خلفية مربعات شفافة */
+
 .bg-shapes {
   position: fixed;
   inset: 0;
@@ -489,9 +489,9 @@ body {
 /* AUTHORS SECTION */
 #authors {
   padding: 100px 20px;
-  background-color: #FFD230; /* نفس لون الهيرو */
+  background-color: #FFD230; 
   font-family: 'Exo', sans-serif;
-  text-align: center; /* تخلي كل شيء في النص */
+  text-align: center; 
 }
 
 .authors-container {
@@ -535,7 +535,7 @@ body {
   box-shadow: 6px 6px 0 #000;
   border-radius: 12px;
   padding: 25px;
-  flex: 0 0 350px; /* كبر الكارد شوية */
+  flex: 0 0 350px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -571,11 +571,11 @@ body {
   height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
-  border-radius: 8px; /* قليل من الاستدارة */
+  border-radius: 8px; 
 }
 
 .author-name {
-  font-size: 1.7rem; /* كبر الاسم */
+  font-size: 1.7rem; 
   font-weight: 900;
   margin-bottom: 8px;
   transition: color 0.25s ease;
@@ -650,7 +650,7 @@ body {
 /* COMMUNITY SECTION */
 #community {
   padding: 100px 20px;
-  background-color: #FFD230; /* نفس باك جراوند الهيرو */
+  background-color: #FFD230; 
   font-family: 'Poppins', sans-serif;
 }
 

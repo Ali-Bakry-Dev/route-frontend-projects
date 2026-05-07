@@ -1,4 +1,3 @@
-// ======================= الكود النهائي بعد التعديل المطلوب =======================
 var global_country = document.getElementById("global-country");
 global_year = document.getElementById("global-year");
 var global_search_btn = document.getElementById("global-search-btn");
@@ -180,26 +179,22 @@ function displayCountries(countries) {
         selectedCountryCode = global_country.value;
         if (selectedCountryCode) {
             var selectedCountryname = global_country.options[global_country.selectedIndex].text;
-            // جلب البيانات الأساسية فقط (العلم والعاصمة) بدون تحميل باقي الأقسام
             await updateSelectedDestinationOnly(selectedCountryCode, selectedCountryname);
         }
     });
 
     global_year.addEventListener("change", function () {
         selectedYear = global_year.value;
-        // لا يتم تحميل أي شيء تلقائياً عند تغيير السنة، ينتظر الضغط على Explore
     });
 }
 
-// دالة جديدة: تعرض فقط العلم والمدينة في selected-destination وتخزن البيانات
 async function updateSelectedDestinationOnly(countryCode, countryName) {
     let response = await fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`);
     let data = await response.json();
-    cites = data;   // حفظ البيانات لاستخدامها لاحقاً عند الضغط على Explore
+    cites = data;
     let capital = data[0].capital[0];
-    current_city = capital;   // تخزين اسم المدينة مؤقتاً
+    current_city = capital;
     
-    // تحديث selected-destination
     const selectedDest = document.getElementById("selected-destination");
     if (selectedDest) {
         selectedDest.style.display = "flex";
@@ -215,15 +210,12 @@ async function updateSelectedDestinationOnly(countryCode, countryName) {
         `;
     }
     
-    // تحديث قائمة المدن
     const citySelect = document.getElementById("global-city");
     citySelect.innerHTML = `<option value="${capital}">${capital}</option>`;
     
-    // إخفاء قسم Country Information تماماً حتى الضغط على Explore
     const dashboardInfo = document.getElementById("dashboard-country-info-section");
     if (dashboardInfo) dashboardInfo.style.display = "none";
     
-    // إخفاء محتوى الأقسام الأخرى مؤقتاً (إذا كانت ظاهرة من قبل)
     showNoCountryMessageForSection("holidays-content", "public holidays");
     showNoCountryMessageForSection("events-content", "events");
     showNoCountryMessageForSection("weather-content", "weather");
@@ -231,10 +223,8 @@ async function updateSelectedDestinationOnly(countryCode, countryName) {
     showNoCountryMessageForSection("sun-times-content", "sun times");
 }
 
-// إخفاء الـ selected-destination في البداية
 const selectedDest = document.getElementById("selected-destination");
 if (selectedDest) selectedDest.style.display = "none";
-// إخفاء الـ dashboard-country-info-section في البداية
 const dashboardInfo = document.getElementById("dashboard-country-info-section");
 if (dashboardInfo) dashboardInfo.style.display = "none";
 
@@ -260,14 +250,12 @@ function showNoCountryMessageForSection(sectionContentId, sectionName) {
     }
 }
 
-// الدالة الأصلية getAllCity ستبقى كما هي ولكن لن تُستخدم إلا عند الضغط على Explore
 async function getAllCity(countryCode, selectedCountryname) {
     console.log("Fetching all city...");
     let response = await fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`);
     cites = await response.json();
     console.log(cites);
     
-    // إظهار الـ selected-destination
     if (selectedDest) selectedDest.style.display = "flex";
     selectedDest.innerHTML = ` 
     <div class="selected-flag">
@@ -284,7 +272,6 @@ async function getAllCity(countryCode, selectedCountryname) {
     document.getElementById("global-city").innerHTML = `<option value="${cites[0].capital[0]}">${cites[0].capital[0]}</option>`;
     current_city = cites[0].capital[0];
     
-    // إظهار الـ dashboard-country-info-section
     if (dashboardInfo) dashboardInfo.style.display = "block";
     
     const dashboardFlag = document.getElementById("dashboard-country-flag");
@@ -329,15 +316,12 @@ function updateAllSectionBadges(countryName, countryCode, cityName, year) {
     if (weatherSubtitle) weatherSubtitle.innerText = `Check 7-day weather forecasts for ${cityName}`;
 }
 
-// ======================= global_search_btnF (هنا يتم تحميل كل شيء) =======================
 async function global_search_btnF(hamada = 1) {
     if (hamada == 1 && cites) {
         console.log(cites);
         
-        // أولا نقوم بتحميل كامل البيانات وعرض Country Information
         if (dashboardInfo) dashboardInfo.style.display = "block";
         
-        // تحديث الداشبورد بمعلومات الدولة كاملة
         if (cites[0].borders && cites[0].borders.length > 0) {
             borders = "";
             for (let index = 0; index < cites[0].borders.length; index++) {
@@ -487,7 +471,6 @@ async function global_search_btnF(hamada = 1) {
             el.addEventListener('click', neighborClickHandler);
         });
         
-        // تحميل جميع الأقسام
         loadHolidays();
         loadEvents(12);
         loadLong_weekends();
@@ -497,7 +480,6 @@ async function global_search_btnF(hamada = 1) {
     }
 }
 
-// ======================= neighborClickHandler (يحدث الصورة وكل حاجة) =======================
 async function neighborClickHandler(e) {
     const neighborCode = this.getAttribute('data-country-code');
     const neighborName = this.getAttribute('data-country-name');
@@ -507,12 +489,10 @@ async function neighborClickHandler(e) {
         global_country.value = neighborCode;
         selectedCountryCode = neighborCode;
         
-        // جلب بيانات الدولة الجديدة (للاستخدام مع updateSelectedDestinationOnly)
         let response = await fetch(`https://restcountries.com/v3.1/alpha/${neighborCode}`);
         let neighborData = await response.json();
         let capital = neighborData[0].capital[0];
         
-        // تحديث الـ selected-destination باستخدام الدالة المناسبة (بدون تحميل باقي الأقسام)
         const flagUrl = neighborFlag || `https://flagcdn.com/w40/${neighborCode.toLowerCase()}.png`;
         if (selectedDest) {
             selectedDest.style.display = "flex";
@@ -531,10 +511,8 @@ async function neighborClickHandler(e) {
         document.getElementById("global-city").innerHTML = `<option value="${capital}">${capital}</option>`;
         current_city = capital;
         
-        // حفظ بيانات الدولة في cites للاستخدام عند الضغط على Explore
         cites = neighborData;
         
-        // إخفاء الـ Country Information والأقسام الأخرى
         if (dashboardInfo) dashboardInfo.style.display = "none";
         showNoCountryMessageForSection("holidays-content", "public holidays");
         showNoCountryMessageForSection("events-content", "events");
@@ -542,10 +520,8 @@ async function neighborClickHandler(e) {
         showNoCountryMessageForSection("lw-content", "long weekends");
         showNoCountryMessageForSection("sun-times-content", "sun times");
         
-        // تحديث البادج (العلم في الأقسام) مؤقتاً (اختياري)
         updateAllSectionBadges(neighborName || neighborCode, neighborCode, capital, selectedYear);
         
-        // لا نقوم بتشغيل global_search_btnF تلقائياً، المستخدم سيضغط Explore
         Swal.fire({
             icon: 'success',
             title: 'Country Selected',
@@ -570,12 +546,10 @@ global_search_btn.addEventListener("click", function () {
             return;
         }
     }
-    // عند الضغط على Explore، نقوم باستداء getAllCity أولاً (لتحديث العلم الكبير إن لزم) ثم global_search_btnF
     getAllCity(selectedCountryCode, global_country.options[global_country.selectedIndex].text);
     global_search_btnF();
 });
 
-// دالة clearSelection لإعادة ضبط كل شيء عند الضغط على X
 function clearSelection() {
     const selectedDest = document.getElementById("selected-destination");
     if (selectedDest) selectedDest.style.display = "none";
@@ -586,22 +560,14 @@ function clearSelection() {
     cites = null;
     document.getElementById("global-city").innerHTML = '<option value="" selected disabled>Select a city</option>';
     
-    // إخفاء محتوى الأقسام
     showNoCountryMessageForSection("holidays-content", "public holidays");
     showNoCountryMessageForSection("events-content", "events");
     showNoCountryMessageForSection("weather-content", "weather");
     showNoCountryMessageForSection("lw-content", "long weekends");
     showNoCountryMessageForSection("sun-times-content", "sun times");
     
-    // إعادة تعيين البادج في الأقسام
     updateAllSectionBadges("", "", "", "");
 }
-
-// باقي الدوال (loadHolidays, loadEvents, loadWeather, loadLong_weekends, loadCurrency, loadSun_Times, toggleFavorite, updateAllStats, applyFilter, loadMy_plans, removeFromPlans, clearAllPlans, setupPlanFilters) كلها كما هي دون تغيير
-
-// ======================= باقي الدوال (بنفس الكود الأصلي) =======================
-// لأنها طويلة جداً، سأضعها كما هي من الكود الذي أرسله المستخدم، مع التأكد من وجودها.
-// سأقوم بنسخها من الكود الأصلي الموجود في السؤال.
 
 async function loadHolidays() {
     if (!selectedCountryCode || selectedCountryCode === "") {
@@ -1213,7 +1179,6 @@ asideLinks.forEach(link => {
         document.querySelectorAll("section").forEach(section => section.classList.remove("active"));
         document.getElementById(targetId).classList.add("active");
         
-        // عند النقر على أي قسم، إذا كانت هناك دولة مختارة ولكن لم يتم الضغط على Explore بعد، نظهر رسالة "Press Explore first"
         if (selectedCountryCode && selectedCountryCode !== "" && dashboardInfo && dashboardInfo.style.display === "none") {
             Swal.fire({
                 icon: 'info',
